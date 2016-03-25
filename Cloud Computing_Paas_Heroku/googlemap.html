@@ -1,0 +1,71 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+   
+</head>
+<body>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            var mapOptions = {
+                center: new google.maps.LatLng(18.9300, 72.8200),
+                zoom: 4,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var infoWindow = new google.maps.InfoWindow();
+            var latlngbounds = new google.maps.LatLngBounds();
+            var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
+            google.maps.event.addListener(map, 'click', function (e) {
+      
+          $.get( "<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+   
+</head>
+<body>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            var mapOptions = {
+                center: new google.maps.LatLng(18.9300, 72.8200),
+                zoom: 4,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var infoWindow = new google.maps.InfoWindow();
+            var latlngbounds = new google.maps.LatLngBounds();
+            var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
+            google.maps.event.addListener(map, 'click', function (e) {
+      
+          $.get( "https://quiet-basin-8064.herokuapp.com/latlng?lat=" + e.latLng.lat() + "&lng=" + e.latLng.lng()).done(function(data) {
+    alert( data );
+  }, "xml")
+  .fail(function() {
+    alert( "error" );
+  });
+
+               
+            });
+        }
+    </script>
+    <div id="dvMap" style="width: 500px; height: 500px">   
+    </div>
+</body>
+</html>/latlng?lat=" + e.latLng.lat() + "&lng=" + e.latLng.lng()).done(function(data) {
+    alert( data );
+  }, "xml")
+  .fail(function() {
+    alert( "error" );
+  });
+	//	$.get("http://localhost:8080/latlng?lat=" + e.latLng.lat() + "&lng=" + e.latLng.lng(),function( data ) {
+ // success:alert( "Data Loaded: " + data );
+//});
+               
+            });
+        }
+    </script>
+    <div id="dvMap" style="width: 500px; height: 500px">   
+    </div>
+</body>
+</html>

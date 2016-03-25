@@ -1,0 +1,16 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>User repository tester</title>
+        <script src="../static/js/jquery-2.1.4.min.js" th:src="@{/js/jquery-2.1.4.min.js}"></script>
+    </head>
+    <body>
+        <h1>Create a new user</h1>
+        <form method="post" action="/register">
+            <input type="text" id="email" name="email" placeholder="Email address"/><br/><br/>
+            <input type="password" id="password1" name="password1" placeholder="Password"/><br/><br/>
+            <input type="password" id="password2" name="password2" placeholder="Repeat password"/><br/><br/>
+
+            <input type="submit" value="Register"/>
+        </form>
+    </body>
+</html>
